@@ -18,4 +18,9 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.window.showInformationMessage('Hello to GDSC FRI!');
     });
     context.subscriptions.push(disposable);
+
+    const commandAUSFilterData = vscode.commands.registerCommand('gdscfri.commandAUSFilterData', () => {
+        vscode.window.showInformationMessage('AUS Filter Data');
+    });
+    context.subscriptions.push(commandAUSFilterData);
 }
